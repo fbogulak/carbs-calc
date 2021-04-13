@@ -1,13 +1,26 @@
 package link.epoczta.carbscalc.ui.portioncarbs
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
+import link.epoczta.carbscalc.utils.toDoubleOrZero
 
 class PortionCarbsViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val portionWeightString = MutableLiveData<String>()
+
+    val carbsIn100gString = MutableLiveData<String>()
+
+    private val carbsInPortion = MutableLiveData(0.0)
+    val carbsInPortionString = Transformations.map(carbsInPortion) {
+        "%.2f".format(it)
     }
-    val text: LiveData<String> = _text
+
+    fun calculatePortionCarbs() {
+        val portionWeight = portionWeightString.value.toDoubleOrZero()
+        val carbsIn100g = carbsIn100gString.value.toDoubleOrZero()
+        carbsInPortion.value = if (portionWeight > 0 && carbsIn100g > 0) {
+            portionWeight * carbsIn100g / 100
+        } else {
+            0.0
+        }
+    }
 }
