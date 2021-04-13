@@ -7,8 +7,8 @@
         android:title="@string/title_portion_carbs" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_portion_weight"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:title="@string/title_portion_weight" />
 
 </menu>

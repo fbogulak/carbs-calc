@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Carbs Calc</string>
     <string name="title_portion_carbs">Carbs In Portion</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_portion_weight">Portion Weight</string>
     <string name="portion_weight">Portion weight</string>
     <string name="carbs_in_100g">Carbs in 100g</string>
     <string name="carbs_in_portion">Carbs in portion:</string>

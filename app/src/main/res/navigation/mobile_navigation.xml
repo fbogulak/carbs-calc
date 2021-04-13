@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_portion_carbs" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="link.epoczta.carbscalc.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_portion_weight"
+        android:name="link.epoczta.carbscalc.ui.portionweight.PortionWeightFragment"
+        android:label="@string/title_portion_weight"
+        tools:layout="@layout/fragment_portion_weight" />
 
 </navigation>
