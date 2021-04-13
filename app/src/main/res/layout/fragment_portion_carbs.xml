@@ -25,7 +25,8 @@
             android:hint="@string/portion_weight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:suffixText="@string/g">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -44,7 +45,8 @@
             android:hint="@string/carbs_in_100g"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/portion_weight_text_field">
+            app:layout_constraintTop_toBottomOf="@id/portion_weight_text_field"
+            app:suffixText="@string/g">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
