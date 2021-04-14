@@ -77,4 +77,60 @@ class MainViewModelTest {
         val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
+
+    @Test
+    fun calculatePortionWeight_someNumbers_returnsCorrectlyRoundedNumber() {
+        // Given
+        portionCarbsViewModel.carbsInPortionString.value = "40"
+        portionCarbsViewModel.carbsIn100gString.value = "37.4"
+
+        // When
+        portionCarbsViewModel.calculatePortionWeight()
+
+        // Then
+        val result = portionCarbsViewModel.portionWeightResult.getOrAwaitValue()
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("107"))
+    }
+
+    @Test
+    fun calculatePortionWeight_emptyStringAndNumber_returnsZero() {
+        // Given
+        portionCarbsViewModel.portionWeightString.value = ""
+        portionCarbsViewModel.carbsIn100gString.value = "37.4"
+
+        // When
+        portionCarbsViewModel.calculatePortionWeight()
+
+        // Then
+        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
+    }
+
+    @Test
+    fun calculatePortionWeight_nullAndNumber_returnsZero() {
+        // Given
+        portionCarbsViewModel.portionWeightString.value = null
+        portionCarbsViewModel.carbsIn100gString.value = "37.4"
+
+        // When
+        portionCarbsViewModel.calculatePortionWeight()
+
+        // Then
+        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
+    }
+
+    @Test
+    fun calculatePortionWeight_nullAndEmptyString_returnsZero() {
+        // Given
+        portionCarbsViewModel.portionWeightString.value = null
+        portionCarbsViewModel.carbsIn100gString.value = ""
+
+        // When
+        portionCarbsViewModel.calculatePortionWeight()
+
+        // Then
+        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
+    }
 }
