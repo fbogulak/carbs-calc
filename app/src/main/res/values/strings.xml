@@ -3,7 +3,9 @@
     <string name="title_portion_carbs">Carbs In Portion</string>
     <string name="title_portion_weight">Portion Weight</string>
     <string name="portion_weight">Portion weight</string>
+    <string name="portion_weight_label">Portion weight:</string>
     <string name="carbs_in_100g">Carbs in 100g</string>
-    <string name="carbs_in_portion">Carbs in portion:</string>
+    <string name="carbs_in_portion">Carbs in portion</string>
+    <string name="carbs_in_portion_label">Carbs in portion:</string>
     <string name="g">g</string>
 </resources>
