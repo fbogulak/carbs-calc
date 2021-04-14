@@ -1,9 +1,11 @@
-package link.epoczta.carbscalc.ui.portioncarbs
+package link.epoczta.carbscalc
 
-import androidx.lifecycle.*
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
+import androidx.lifecycle.ViewModel
 import link.epoczta.carbscalc.utils.toDoubleOrZero
 
-class PortionCarbsViewModel : ViewModel() {
+class MainViewModel : ViewModel() {
 
     val portionWeightString = MutableLiveData<String>()
 

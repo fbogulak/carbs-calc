@@ -1,25 +1,24 @@
-package link.epoczta.carbscalc.ui.portioncarbs
+package link.epoczta.carbscalc
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import link.epoczta.carbscalc.getOrAwaitValue
-import org.hamcrest.CoreMatchers.`is`
-import org.hamcrest.MatcherAssert.assertThat
+import org.hamcrest.CoreMatchers
+import org.hamcrest.MatcherAssert
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import java.util.*
 
-class PortionCarbsViewModelTest {
+class MainViewModelTest {
 
     // Executes each task synchronously using Architecture Components.
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
 
-    private lateinit var portionCarbsViewModel: PortionCarbsViewModel
+    private lateinit var portionCarbsViewModel: MainViewModel
 
     @Before
     fun setup() {
-        portionCarbsViewModel = PortionCarbsViewModel()
+        portionCarbsViewModel = MainViewModel()
         Locale.setDefault(Locale("en", "US"))
     }
 
@@ -34,7 +33,7 @@ class PortionCarbsViewModelTest {
 
         // Then
         val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
-        assertThat(result, `is`("65.19"))
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("65.19"))
     }
 
     @Test
@@ -48,7 +47,7 @@ class PortionCarbsViewModelTest {
 
         // Then
         val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
-        assertThat(result, `is`("0.00"))
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 
     @Test
@@ -62,7 +61,7 @@ class PortionCarbsViewModelTest {
 
         // Then
         val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
-        assertThat(result, `is`("0.00"))
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 
     @Test
@@ -76,6 +75,6 @@ class PortionCarbsViewModelTest {
 
         // Then
         val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
-        assertThat(result, `is`("0.00"))
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 }
