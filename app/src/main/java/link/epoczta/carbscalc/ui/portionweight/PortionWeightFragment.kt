@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import link.epoczta.carbscalc.MainViewModel
 import link.epoczta.carbscalc.databinding.FragmentPortionWeightBinding
 
@@ -25,6 +24,14 @@ class PortionWeightFragment : Fragment() {
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+
+        viewModel.carbsInPortionString.observe(viewLifecycleOwner) {
+            viewModel.calculatePortionWeight()
+        }
+
+        viewModel.carbsIn100gString.observe(viewLifecycleOwner) {
+            viewModel.calculatePortionWeight()
+        }
 
         return binding.root
     }

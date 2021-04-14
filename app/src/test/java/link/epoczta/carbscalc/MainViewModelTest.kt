@@ -32,7 +32,7 @@ class MainViewModelTest {
         portionCarbsViewModel.calculatePortionCarbs()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
+        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("65.19"))
     }
 
@@ -46,7 +46,7 @@ class MainViewModelTest {
         portionCarbsViewModel.calculatePortionCarbs()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
+        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 
@@ -60,7 +60,7 @@ class MainViewModelTest {
         portionCarbsViewModel.calculatePortionCarbs()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
+        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 
@@ -74,7 +74,7 @@ class MainViewModelTest {
         portionCarbsViewModel.calculatePortionCarbs()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
+        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 }
