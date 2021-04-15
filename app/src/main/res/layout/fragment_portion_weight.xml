@@ -30,6 +30,7 @@
             app:suffixText="@string/g">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/carbs_in_portion_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
@@ -50,6 +51,7 @@
             app:suffixText="@string/g">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/carbs_in_100g_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
