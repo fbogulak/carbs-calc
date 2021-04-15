@@ -30,7 +30,7 @@ class MainViewModel : ViewModel() {
     fun calculatePortionWeight() {
         val carbsInPortion = carbsInPortionString.value.toDoubleOrZero()
         val carbsIn100g = carbsIn100gString.value.toDoubleOrZero()
-        portionWeight.value = if (carbsInPortion > 0 && carbsIn100g > 0) {
+        portionWeight.value = if (carbsIn100g > 0) {
             carbsInPortion / carbsIn100g * 100
         } else {
             0.0
