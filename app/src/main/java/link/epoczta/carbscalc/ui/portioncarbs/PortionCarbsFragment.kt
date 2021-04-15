@@ -2,6 +2,7 @@ package link.epoczta.carbscalc.ui.portioncarbs
 
 import android.os.Bundle
 import android.text.Editable
+import android.text.InputFilter
 import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import link.epoczta.carbscalc.MainViewModel
 import link.epoczta.carbscalc.R
 import link.epoczta.carbscalc.databinding.FragmentPortionCarbsBinding
+import link.epoczta.carbscalc.utils.DecimalDigitsInputFilter
 
 class PortionCarbsFragment : Fragment(), TextWatcher {
 
@@ -29,6 +31,8 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+
+        binding.carbsIn100gEdit.filters = arrayOf(DecimalDigitsInputFilter(10, 10))
 
         binding.portionWeightEdit.addTextChangedListener(this)
         binding.carbsIn100gEdit.addTextChangedListener(this)

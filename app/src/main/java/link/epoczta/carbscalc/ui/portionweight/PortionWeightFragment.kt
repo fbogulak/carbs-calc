@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import link.epoczta.carbscalc.MainViewModel
 import link.epoczta.carbscalc.databinding.FragmentPortionWeightBinding
+import link.epoczta.carbscalc.utils.DecimalDigitsInputFilter
 
 class PortionWeightFragment : Fragment(), TextWatcher {
 
@@ -26,6 +27,9 @@ class PortionWeightFragment : Fragment(), TextWatcher {
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+
+        binding.carbsInPortionEdit.filters = arrayOf(DecimalDigitsInputFilter(10, 10))
+        binding.carbsIn100gEdit.filters = arrayOf(DecimalDigitsInputFilter(10, 10))
 
         binding.carbsInPortionEdit.addTextChangedListener(this)
         binding.carbsIn100gEdit.addTextChangedListener(this)
