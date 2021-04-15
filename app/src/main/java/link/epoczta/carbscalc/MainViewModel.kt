@@ -11,32 +11,22 @@ class MainViewModel : ViewModel() {
     val carbsIn100gString = MutableLiveData<String>()
     val carbsInPortionString = MutableLiveData<String>()
 
-    private val carbsInPortion = MutableLiveData(0.0)
-    val carbsInPortionResult = Transformations.map(carbsInPortion) {
-        PORTION_CARBS_FORMAT.format(it)
-    }
-
-    private val portionWeight = MutableLiveData(0.0)
-    val portionWeightResult = Transformations.map(portionWeight) {
-        PORTION_WEIGHT_FORMAT.format(it)
-    }
-
     fun calculatePortionCarbs() {
         val portionWeight = portionWeightString.value.toDoubleOrZero()
         val carbsIn100g = carbsIn100gString.value.toDoubleOrZero()
-        carbsInPortion.value = portionWeight * carbsIn100g / 100
-        carbsInPortionString.value = carbsInPortionResult.value
+        val carbsInPortion = portionWeight * carbsIn100g / 100
+        carbsInPortionString.value = PORTION_CARBS_FORMAT.format(carbsInPortion)
     }
 
     fun calculatePortionWeight() {
         val carbsInPortion = carbsInPortionString.value.toDoubleOrZero()
         val carbsIn100g = carbsIn100gString.value.toDoubleOrZero()
-        portionWeight.value = if (carbsIn100g > 0) {
+        val portionWeight = if (carbsIn100g > 0) {
             carbsInPortion / carbsIn100g * 100
         } else {
             0.0
         }
-        portionWeightString.value = portionWeightResult.value
+        portionWeightString.value = PORTION_WEIGHT_FORMAT.format(portionWeight)
     }
 
     companion object {

@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@{viewModel.portionWeightResult}"
+            android:text="@{viewModel.portionWeightString}"
             android:textSize="30sp"
             app:layout_constraintEnd_toStartOf="@+id/unit_label"
             app:layout_constraintHorizontal_bias="0.5"
