@@ -25,6 +25,7 @@ class MainViewModel : ViewModel() {
         val portionWeight = portionWeightString.value.toDoubleOrZero()
         val carbsIn100g = carbsIn100gString.value.toDoubleOrZero()
         carbsInPortion.value = portionWeight * carbsIn100g / 100
+        carbsInPortionString.value = carbsInPortionResult.value
     }
 
     fun calculatePortionWeight() {
@@ -35,6 +36,7 @@ class MainViewModel : ViewModel() {
         } else {
             0.0
         }
+        portionWeightString.value = portionWeightResult.value
     }
 
     companion object {
