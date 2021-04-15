@@ -24,11 +24,7 @@ class MainViewModel : ViewModel() {
     fun calculatePortionCarbs() {
         val portionWeight = portionWeightString.value.toDoubleOrZero()
         val carbsIn100g = carbsIn100gString.value.toDoubleOrZero()
-        carbsInPortion.value = if (portionWeight > 0 && carbsIn100g > 0) {
-            portionWeight * carbsIn100g / 100
-        } else {
-            0.0
-        }
+        carbsInPortion.value = portionWeight * carbsIn100g / 100
     }
 
     fun calculatePortionWeight() {
@@ -41,7 +37,7 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    companion object{
+    companion object {
         const val PORTION_CARBS_FORMAT = "%.2f"
         const val PORTION_WEIGHT_FORMAT = "%.0f"
     }
