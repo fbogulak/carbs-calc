@@ -28,7 +28,7 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
 
         binding = FragmentPortionCarbsBinding.inflate(inflater)
 
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
 
         binding.portionWeightEdit.apply {
