@@ -14,14 +14,20 @@ class MainViewModel : ViewModel() {
     fun calculatePortionCarbs() {
         val portionWeight = portionWeightString.value.toDoubleOrZero()
         val carbsIn100g = carbsIn100gString.value.toDoubleOrZero()
-        val carbsInPortion = portionWeight * carbsIn100g / 100
+
+        val carbsInPortion = if (carbsIn100g in 0.0..100.0) {
+            portionWeight * carbsIn100g / 100
+        } else {
+            0.0
+        }
         carbsInPortionString.value = PORTION_CARBS_FORMAT.format(carbsInPortion)
     }
 
     fun calculatePortionWeight() {
         val carbsInPortion = carbsInPortionString.value.toDoubleOrZero()
         val carbsIn100g = carbsIn100gString.value.toDoubleOrZero()
-        val portionWeight = if (carbsIn100g > 0) {
+
+        val portionWeight = if (carbsIn100g > 0 && carbsIn100g <= 100) {
             carbsInPortion / carbsIn100g * 100
         } else {
             0.0

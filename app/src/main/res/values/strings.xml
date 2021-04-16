@@ -8,4 +8,8 @@
     <string name="carbs_in_portion">Carbs in portion</string>
     <string name="carbs_in_portion_label">Carbs in portion:</string>
     <string name="g">g</string>
+    <string name="this_value_cant_be_greater_than_100">This value can\'t be greater than 100</string>
+    <string name="wrong_number_format">Wrong number format</string>
+    <string name="this_value_cant_be_lower_than_0">This value can\'t be lower than 0</string>
+    <string name="this_value_cant_be_0">This value can\'t be 0</string>
 </resources>
