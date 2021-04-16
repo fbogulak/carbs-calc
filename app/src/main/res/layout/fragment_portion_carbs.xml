@@ -33,6 +33,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:nextFocusDown="@id/carbs_in_100g_edit"
+                android:singleLine="true"
                 android:text="@={viewModel.portionWeightString}" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,6 +58,8 @@
                 android:layout_height="wrap_content"
                 android:digits="0123456789.,"
                 android:inputType="numberDecimal"
+                android:nextFocusDown="@id/portion_weight_edit"
+                android:singleLine="true"
                 android:text="@={viewModel.carbsIn100gString}" />
 
         </com.google.android.material.textfield.TextInputLayout>
