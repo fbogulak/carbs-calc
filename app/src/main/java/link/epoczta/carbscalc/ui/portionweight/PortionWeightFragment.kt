@@ -32,14 +32,21 @@ class PortionWeightFragment : Fragment(), TextWatcher {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
-        binding.carbsInPortionEdit.filters = arrayOf(DecimalDigitsInputFilter(10, 10))
-        binding.carbsIn100gEdit.filters = arrayOf(DecimalDigitsInputFilter(10, 10))
+        binding.carbsInPortionEdit.apply {
+            filters = arrayOf(DecimalDigitsInputFilter(10, 10))
+            addTextChangedListener(this@PortionWeightFragment)
+            setSelectAllOnFocus(true)
+        }
 
-        binding.carbsInPortionEdit.addTextChangedListener(this)
-        binding.carbsIn100gEdit.addTextChangedListener(this)
+        binding.carbsIn100gEdit.apply {
+            filters = arrayOf(DecimalDigitsInputFilter(10, 10))
+            addTextChangedListener(this@PortionWeightFragment)
+            setSelectAllOnFocus(true)
+        }
 
         return binding.root
     }
+
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
     }
