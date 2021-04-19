@@ -8,6 +8,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.tabs.TabLayoutMediator
 import link.epoczta.carbscalc.databinding.ActivityMainBinding
 import link.epoczta.carbscalc.ui.adapters.ViewPagerFragmentAdapter
 
@@ -20,5 +21,13 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.viewPager.adapter = ViewPagerFragmentAdapter(this)
+        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
+            tab.text = getString(
+                when (position) {
+                    0 -> R.string.title_portion_carbs
+                    else -> R.string.portion_weight
+                }
+            )
+        }.attach()
     }
 }
