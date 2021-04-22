@@ -1,4 +1,4 @@
-package link.epoczta.carbscalc.ui.portionweight
+package link.epoczta.carbscalc.ui.calculations.portionweight
 
 import android.os.Bundle
 import android.text.Editable
@@ -8,18 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import link.epoczta.carbscalc.MainViewModel
+import link.epoczta.carbscalc.ui.calculations.CalculationsViewModel
 import link.epoczta.carbscalc.R
 import link.epoczta.carbscalc.databinding.FragmentPortionWeightBinding
 import link.epoczta.carbscalc.utils.DecimalDigitsInputFilter
-import link.epoczta.carbscalc.utils.toDoubleOrZero
 import java.lang.NumberFormatException
 import java.text.DecimalFormatSymbols
 
 class PortionWeightFragment : Fragment(), TextWatcher {
 
     private lateinit var binding: FragmentPortionWeightBinding
-    private val viewModel: MainViewModel by activityViewModels()
+    private val viewModel: CalculationsViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

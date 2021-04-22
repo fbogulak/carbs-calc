@@ -7,14 +7,14 @@
 
         <variable
             name="viewModel"
-            type="link.epoczta.carbscalc.MainViewModel" />
+            type="link.epoczta.carbscalc.ui.calculations.CalculationsViewModel" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.portionweight.PortionWeightFragment">
+        tools:context=".ui.calculations.portionweight.PortionWeightFragment">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/carbs_in_portion_text_field"

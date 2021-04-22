@@ -1,4 +1,4 @@
-package link.epoczta.carbscalc.ui.portioncarbs
+package link.epoczta.carbscalc.ui.calculations.portioncarbs
 
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.espresso.Espresso.onView
@@ -8,7 +8,6 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.MediumTest
 import link.epoczta.carbscalc.R
-import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.util.*

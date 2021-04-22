@@ -1,6 +1,7 @@
 package link.epoczta.carbscalc
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import link.epoczta.carbscalc.ui.calculations.CalculationsViewModel
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
 import org.junit.Before
@@ -8,17 +9,17 @@ import org.junit.Rule
 import org.junit.Test
 import java.util.*
 
-class MainViewModelTest {
+class CalculationsViewModelTest {
 
     // Executes each task synchronously using Architecture Components.
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
 
-    private lateinit var portionCarbsViewModel: MainViewModel
+    private lateinit var portionCarbsViewModel: CalculationsViewModel
 
     @Before
     fun setup() {
-        portionCarbsViewModel = MainViewModel()
+        portionCarbsViewModel = CalculationsViewModel()
         Locale.setDefault(Locale("en", "US"))
     }
 

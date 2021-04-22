@@ -1,4 +1,4 @@
-package link.epoczta.carbscalc.ui.portionweight
+package link.epoczta.carbscalc.ui.calculations.portionweight
 
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.espresso.Espresso.onView
