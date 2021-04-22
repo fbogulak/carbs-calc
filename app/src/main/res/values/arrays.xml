@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="unit_entries">
+        <item>@string/carbohydrate_units</item>
+        <item>@string/grams</item>
+    </string-array>
+    <string-array name="unit_values">
+        <item>carbohydrate_units</item>
+        <item>grams</item>
+    </string-array>
+</resources>
