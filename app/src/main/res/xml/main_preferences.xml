@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ListPreference
-        app:entries="@array/unit_entries"
-        app:entryValues="@array/unit_values"
-        app:key="unit"
-        app:title="@string/unit" />
+
+    <PreferenceCategory
+        app:key="unit_category"
+        app:title="@string/calculations">
+
+        <ListPreference
+            app:entries="@array/unit_entries"
+            app:entryValues="@array/unit_values"
+            app:key="carbohydrates_unit"
+            app:defaultValue="@string/grams_value"
+            app:title="@string/carbohydrates_unit"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
 </PreferenceScreen>

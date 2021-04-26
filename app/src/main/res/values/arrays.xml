@@ -5,7 +5,7 @@
         <item>@string/grams</item>
     </string-array>
     <string-array name="unit_values">
-        <item>carbohydrate_units</item>
-        <item>grams</item>
+        <item>@string/carbohydrate_units_value</item>
+        <item>@string/grams_value</item>
     </string-array>
 </resources>

@@ -12,8 +12,11 @@
     <string name="wrong_number_format">Wrong number format</string>
     <string name="this_value_cant_be_lower_than_0">This value can\'t be lower than 0</string>
     <string name="this_value_cant_be_0">This value can\'t be 0</string>
-    <string name="unit">Unit</string>
+    <string name="carbohydrates_unit">Carbohydrates Unit</string>
     <string name="carbohydrate_units">Carbohydrate units</string>
     <string name="grams">Grams</string>
     <string name="settings">Settings</string>
+    <string name="calculations">Calculations</string>
+    <string name="carbohydrate_units_value" translatable="false">carbohydrate_units_value</string>
+    <string name="grams_value" translatable="false">grams_value</string>
 </resources>
