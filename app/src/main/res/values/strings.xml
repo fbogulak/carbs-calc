@@ -19,4 +19,5 @@
     <string name="calculations">Calculations</string>
     <string name="carbohydrate_units_value" translatable="false">carbohydrate_units_value</string>
     <string name="grams_value" translatable="false">grams_value</string>
+    <string name="carb_units">\u0020carb units</string>
 </resources>

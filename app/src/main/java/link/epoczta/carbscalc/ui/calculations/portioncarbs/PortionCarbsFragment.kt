@@ -11,6 +11,7 @@ import androidx.fragment.app.activityViewModels
 import link.epoczta.carbscalc.ui.calculations.CalculationsViewModel
 import link.epoczta.carbscalc.R
 import link.epoczta.carbscalc.databinding.FragmentPortionCarbsBinding
+import link.epoczta.carbscalc.utils.CarbUnits
 import link.epoczta.carbscalc.utils.DecimalDigitsInputFilter
 import java.lang.NumberFormatException
 import java.text.DecimalFormatSymbols
@@ -40,6 +41,21 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
             filters = arrayOf(DecimalDigitsInputFilter(10, 10))
             addTextChangedListener(this@PortionCarbsFragment)
             setSelectAllOnFocus(true)
+        }
+
+        viewModel.selectedUnit.observe(viewLifecycleOwner) {
+            it?.let {
+                when (it) {
+                    CarbUnits.CARBOHYDRATE_UNITS -> {
+                        binding.unitLabel.text = getString(R.string.carb_units)
+                        viewModel.calculatePortionCarbs()
+                    }
+                    CarbUnits.GRAMS -> {
+                        binding.unitLabel.text = getString(R.string.g)
+                        viewModel.calculatePortionCarbs()
+                    }
+                }
+            }
         }
 
         return binding.root
