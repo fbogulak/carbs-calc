@@ -4,7 +4,7 @@
     <string name="title_portion_weight">Portion Weight</string>
     <string name="portion_weight">Portion weight</string>
     <string name="portion_weight_label">Portion weight:</string>
-    <string name="carbs_in_100g">Carbs in 100g</string>
+    <string name="carbs_in_100_g">Carbs in 100 g</string>
     <string name="carbs_in_portion">Carbs in portion</string>
     <string name="carbs_in_portion_label">Carbs in portion:</string>
     <string name="g">g</string>
@@ -19,5 +19,5 @@
     <string name="calculations">Calculations</string>
     <string name="carbohydrate_units_value" translatable="false">carbohydrate_units_value</string>
     <string name="grams_value" translatable="false">grams_value</string>
-    <string name="carb_units">\u0020carb units</string>
+    <string name="carb_units">carb units</string>
 </resources>
