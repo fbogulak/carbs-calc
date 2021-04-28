@@ -33,7 +33,7 @@ class CalculationsViewModelTest {
         portionCarbsViewModel.calculatePortionCarbs()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
+        val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("65.19"))
     }
 
@@ -47,7 +47,7 @@ class CalculationsViewModelTest {
         portionCarbsViewModel.calculatePortionCarbs()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
+        val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 
@@ -61,7 +61,7 @@ class CalculationsViewModelTest {
         portionCarbsViewModel.calculatePortionCarbs()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
+        val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 
@@ -75,7 +75,7 @@ class CalculationsViewModelTest {
         portionCarbsViewModel.calculatePortionCarbs()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
+        val result = portionCarbsViewModel.carbsInPortionString.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
     }
 
@@ -89,49 +89,49 @@ class CalculationsViewModelTest {
         portionCarbsViewModel.calculatePortionWeight()
 
         // Then
-        val result = portionCarbsViewModel.portionWeightResult.getOrAwaitValue()
+        val result = portionCarbsViewModel.portionWeightString.getOrAwaitValue()
         MatcherAssert.assertThat(result, CoreMatchers.`is`("107"))
     }
 
     @Test
     fun calculatePortionWeight_emptyStringAndNumber_returnsZero() {
         // Given
-        portionCarbsViewModel.portionWeightString.value = ""
+        portionCarbsViewModel.carbsInPortionString.value = ""
         portionCarbsViewModel.carbsIn100gString.value = "37.4"
 
         // When
         portionCarbsViewModel.calculatePortionWeight()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
-        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
+        val result = portionCarbsViewModel.portionWeightString.getOrAwaitValue()
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0"))
     }
 
     @Test
     fun calculatePortionWeight_nullAndNumber_returnsZero() {
         // Given
-        portionCarbsViewModel.portionWeightString.value = null
+        portionCarbsViewModel.carbsInPortionString.value = null
         portionCarbsViewModel.carbsIn100gString.value = "37.4"
 
         // When
         portionCarbsViewModel.calculatePortionWeight()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
-        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
+        val result = portionCarbsViewModel.portionWeightString.getOrAwaitValue()
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0"))
     }
 
     @Test
     fun calculatePortionWeight_nullAndEmptyString_returnsZero() {
         // Given
-        portionCarbsViewModel.portionWeightString.value = null
+        portionCarbsViewModel.carbsInPortionString.value = null
         portionCarbsViewModel.carbsIn100gString.value = ""
 
         // When
         portionCarbsViewModel.calculatePortionWeight()
 
         // Then
-        val result = portionCarbsViewModel.carbsInPortionResult.getOrAwaitValue()
-        MatcherAssert.assertThat(result, CoreMatchers.`is`("0.00"))
+        val result = portionCarbsViewModel.portionWeightString.getOrAwaitValue()
+        MatcherAssert.assertThat(result, CoreMatchers.`is`("0"))
     }
 }
