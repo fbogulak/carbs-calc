@@ -2,6 +2,7 @@ package link.epoczta.carbscalc.ui.calculations
 
 import android.os.Bundle
 import android.view.*
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -27,12 +28,19 @@ class CalculationsFragment : Fragment() {
 
         binding.viewPager.adapter = ViewPagerFragmentAdapter(requireActivity())
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
-            tab.text = getString(
-                when (position) {
-                    0 -> R.string.title_portion_carbs
-                    else -> R.string.portion_weight
+            when (position) {
+                0 -> {
+                    tab.text = getString(R.string.title_portion_carbs)
+                    tab.icon =
+                        ResourcesCompat.getDrawable(resources, R.drawable.ic_bread, context?.theme)
                 }
-            )
+                else -> {
+                    tab.text = getString(R.string.portion_weight)
+                    tab.icon =
+                        ResourcesCompat.getDrawable(resources, R.drawable.ic_scale, context?.theme)
+                }
+            }
+
         }.attach()
 
         setHasOptionsMenu(true)
