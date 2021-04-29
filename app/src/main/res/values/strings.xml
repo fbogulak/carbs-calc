@@ -20,4 +20,12 @@
     <string name="carbohydrate_units_value" translatable="false">carbohydrate_units_value</string>
     <string name="grams_value" translatable="false">grams_value</string>
     <string name="carb_units">carb units</string>
+    <string name="about">About</string>
+    <string name="about_description">This app was created to help diabetics in their daily carb counting routine.</string>
+    <string name="about_linking">Icons by\u0020</string>
+    <string name="icons8_link"><a href="https://icons8.com">Icons8</a></string>
+    <string name="developer_label">Developer:\u0020</string>
+    <string name="app_developer">Franciszek Bogulak</string>
+    <string name="version_label">Version:\u0020</string>
+    <string name="app_version">1.0</string>
 </resources>

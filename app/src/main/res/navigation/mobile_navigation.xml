@@ -13,5 +13,9 @@
         android:id="@+id/calculationsFragment"
         android:name="link.epoczta.carbscalc.ui.calculations.CalculationsFragment"
         android:label="@string/app_name" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="link.epoczta.carbscalc.ui.about.AboutFragment"
+        android:label="@string/about" />
 
 </navigation>
