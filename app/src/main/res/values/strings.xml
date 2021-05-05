@@ -23,10 +23,10 @@
     <string name="about">About</string>
     <string name="about_description">This app was created to help diabetics in their daily carb counting routine.</string>
     <string name="about_linking">Icons by\u0020</string>
-    <string name="icons8_link"><a href="https://icons8.com">Icons8</a></string>
+    <string name="icons8_link" translatable="false"><a href="https://icons8.com">Icons8</a></string>
     <string name="developer_label">Developer:\u0020</string>
-    <string name="app_developer">Franciszek Bogulak</string>
+    <string name="app_developer" translatable="false">Franciszek Bogulak</string>
     <string name="version_label">Version:\u0020</string>
-    <string name="app_version">1.0</string>
+    <string name="app_version" translatable="false">1.0</string>
     <string name="slice_of_bread_and_calc_with_two_rounded_arrows">Slice of bread and calc with two rounded arrows</string>
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_portion_carbs">Węglowodany</string>
+    <string name="title_portion_weight">Waga Porcji</string>
+    <string name="portion_weight">Waga porcji</string>
+    <string name="portion_weight_label">Waga porcji:</string>
+    <string name="carbs_in_100_g">Węglowodany w 100 g</string>
+    <string name="carbs_in_portion">Węglowodany w porcji</string>
+    <string name="carbs_in_portion_label">Węglowodany w porcji:</string>
+    <string name="g">g</string>
+    <string name="this_value_cant_be_greater_than_100">Wartość nie może być większa niż 100</string>
+    <string name="wrong_number_format">Nieprawidłowy format liczby</string>
+    <string name="this_value_cant_be_lower_than_0">Wartość nie może być mniejsza niż 0</string>
+    <string name="this_value_cant_be_0">Wartość nie może być równa 0</string>
+    <string name="carbohydrates_unit">Jednostka Węglowodanów</string>
+    <string name="carbohydrate_units">Wymienniki węglowodanowe</string>
+    <string name="grams">Gramy</string>
+    <string name="settings">Ustawienia</string>
+    <string name="calculations">Obliczenia</string>
+    <string name="carb_units">WW</string>
+    <string name="about">O Aplikacji</string>
+    <string name="about_description">Aplikacja została stworzona z myslą o diabetykach, aby pomóc im w codziennym obliczaniu spożywanych węglowodanów.</string>
+    <string name="about_linking">Ikonki z\u0020</string>
+    <string name="developer_label">Deweloper:\u0020</string>
+    <string name="version_label">Wersja:\u0020</string>
+    <string name="slice_of_bread_and_calc_with_two_rounded_arrows">Kromka chleba i kalkulator, z dwoma zaokrągonymi strzalkami.</string>
+    <string name="app_name">Prosty Kalkulator WW</string>
+</resources>
