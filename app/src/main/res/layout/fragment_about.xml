@@ -101,13 +101,13 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_height="0dp"
             android:layout_marginTop="16dp"
             android:contentDescription="@string/slice_of_bread_and_calc_with_two_rounded_arrows"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/bread_and_calc"
-            app:tint="@color/primaryColor" />
+            app:tint="?android:attr/colorPrimary" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
