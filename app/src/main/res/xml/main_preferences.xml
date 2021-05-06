@@ -10,7 +10,6 @@
             app:entries="@array/unit_entries"
             app:entryValues="@array/unit_values"
             app:key="carbohydrates_unit"
-            app:defaultValue="@string/grams_value"
             app:title="@string/carbohydrates_unit"
             app:useSimpleSummaryProvider="true" />
 
