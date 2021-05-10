@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="title_portion_carbs">Węglowodany</string>
-    <string name="title_portion_weight">Waga Porcji</string>
     <string name="portion_weight">Waga porcji</string>
     <string name="portion_weight_label">Waga porcji:</string>
     <string name="carbs_in_100_g">Węglowodany w 100 g</string>
