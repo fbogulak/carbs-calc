@@ -26,6 +26,6 @@
     <string name="developer_label">Developer:\u0020</string>
     <string name="app_developer" translatable="false">Franciszek Bogulak</string>
     <string name="version_label">Version:\u0020</string>
-    <string name="app_version" translatable="false">1.0</string>
+    <string name="app_version" translatable="false">1.0.0</string>
     <string name="slice_of_bread_and_calc_with_two_rounded_arrows">Slice of bread and calc with two rounded arrows</string>
 </resources>
