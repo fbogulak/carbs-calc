@@ -60,6 +60,12 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
             }
         }
 
+        viewModel.carbsInMeal.observe(viewLifecycleOwner) {
+            it?.let {
+                binding.resetMealButton.isEnabled = it != 0.0
+            }
+        }
+
         return binding.root
     }
 

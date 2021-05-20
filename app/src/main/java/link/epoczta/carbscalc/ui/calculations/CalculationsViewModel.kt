@@ -1,5 +1,6 @@
 package link.epoczta.carbscalc.ui.calculations
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
@@ -12,8 +13,11 @@ class CalculationsViewModel : ViewModel() {
     val carbsIn100gString = MutableLiveData<String>()
     val carbsInPortionString = MutableLiveData<String>()
 
-    private val carbsInMeal = MutableLiveData(0.0)
-    val carbsInMealString = Transformations.map(carbsInMeal) {
+    private val _carbsInMeal = MutableLiveData(0.0)
+    val carbsInMeal: LiveData<Double>
+        get() = _carbsInMeal
+
+    val carbsInMealString = Transformations.map(_carbsInMeal) {
         CARBS_FORMAT.format(it)
     }
 
@@ -51,17 +55,17 @@ class CalculationsViewModel : ViewModel() {
 
     fun calculateMealCarbs() {
         val carbsInPortion = carbsInPortionString.value.toDoubleOrZero()
-        carbsInMeal.value = carbsInMeal.value?.plus(carbsInPortion)
+        _carbsInMeal.value = _carbsInMeal.value?.plus(carbsInPortion)
     }
 
     fun resetMealCarbs() {
-        carbsInMeal.value = 0.0
+        _carbsInMeal.value = 0.0
     }
 
     fun carbsUnitChanged(newUnit: CarbUnits) {
         when (newUnit) {
-            CarbUnits.CARBOHYDRATE_UNITS -> carbsInMeal.value = carbsInMeal.value?.div(10)
-            else -> carbsInMeal.value = carbsInMeal.value?.times(10)
+            CarbUnits.CARBOHYDRATE_UNITS -> _carbsInMeal.value = _carbsInMeal.value?.div(10)
+            else -> _carbsInMeal.value = _carbsInMeal.value?.times(10)
         }
     }
 
