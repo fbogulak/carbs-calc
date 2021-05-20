@@ -24,4 +24,7 @@
     <string name="version_label">Wersja:\u0020</string>
     <string name="slice_of_bread_and_calc_with_two_rounded_arrows">Kromka chleba i kalkulator, z dwoma zaokrągonymi strzalkami.</string>
     <string name="app_name">Prosty Kalkulator WW</string>
+    <string name="add_to_meal">Dodaj Do Posiłku</string>
+    <string name="carbs_in_meal_label">Węglowodany w posiłku:</string>
+    <string name="reset_meal">Resetuj Posiłek</string>
 </resources>
