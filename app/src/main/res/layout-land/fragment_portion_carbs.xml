@@ -73,7 +73,7 @@
                 android:text="@string/g"
                 android:textSize="20sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/carbs_in_meal_text2"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/carbs_in_meal_label2"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/carbs_in_meal_text2" />
 
