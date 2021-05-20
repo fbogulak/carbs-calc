@@ -1,6 +1,7 @@
 package link.epoczta.carbscalc.ui.calculations
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import link.epoczta.carbscalc.utils.CarbUnits
 import link.epoczta.carbscalc.utils.toDoubleOrZero
@@ -10,6 +11,11 @@ class CalculationsViewModel : ViewModel() {
     val portionWeightString = MutableLiveData<String>()
     val carbsIn100gString = MutableLiveData<String>()
     val carbsInPortionString = MutableLiveData<String>()
+
+    private val carbsInMeal = MutableLiveData(0.0)
+    val carbsInMealString = Transformations.map(carbsInMeal) {
+        CARBS_FORMAT.format(it)
+    }
 
     val selectedUnit = MutableLiveData<CarbUnits>()
 
@@ -25,7 +31,7 @@ class CalculationsViewModel : ViewModel() {
         } else {
             0.0
         }
-        carbsInPortionString.value = PORTION_CARBS_FORMAT.format(carbsInPortion)
+        carbsInPortionString.value = CARBS_FORMAT.format(carbsInPortion)
     }
 
     fun calculatePortionWeight() {
@@ -43,8 +49,13 @@ class CalculationsViewModel : ViewModel() {
         portionWeightString.value = PORTION_WEIGHT_FORMAT.format(portionWeight)
     }
 
+    fun calculateMealCarbs() {
+        val carbsInPortion = carbsInPortionString.value.toDoubleOrZero()
+        carbsInMeal.value = carbsInMeal.value?.plus(carbsInPortion)
+    }
+
     companion object {
-        const val PORTION_CARBS_FORMAT = "%.2f"
+        const val CARBS_FORMAT = "%.2f"
         const val PORTION_WEIGHT_FORMAT = "%.0f"
     }
 }
