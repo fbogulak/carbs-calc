@@ -109,9 +109,11 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
         if (makeResultVisible) {
             binding.carbsInPortionText.visibility = View.VISIBLE
             binding.unitLabelPortion.visibility = View.VISIBLE
+            binding.addToMealButton.isEnabled = true
         } else {
-            binding.carbsInPortionText.visibility = View.GONE
-            binding.unitLabelPortion.visibility = View.GONE
+            binding.carbsInPortionText.visibility = View.INVISIBLE
+            binding.unitLabelPortion.visibility = View.INVISIBLE
+            binding.addToMealButton.isEnabled = false
         }
     }
 }
