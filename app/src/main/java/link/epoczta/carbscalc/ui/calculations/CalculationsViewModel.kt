@@ -13,6 +13,10 @@ class CalculationsViewModel : ViewModel() {
     val carbsIn100gString = MutableLiveData<String>()
     val carbsInPortionString = MutableLiveData<String>()
 
+    val carbsInPortion: LiveData<Double> = Transformations.map(carbsInPortionString) {
+        it.toDoubleOrZero()
+    }
+
     private val _carbsInMeal = MutableLiveData(0.0)
     val carbsInMeal: LiveData<Double>
         get() = _carbsInMeal

@@ -60,6 +60,12 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
             }
         }
 
+        viewModel.carbsInPortion.observe(viewLifecycleOwner) {
+            it?.let {
+                binding.addToMealButton.isEnabled = it != 0.0
+            }
+        }
+
         viewModel.carbsInMeal.observe(viewLifecycleOwner) {
             it?.let {
                 binding.resetMealButton.isEnabled = it != 0.0
@@ -115,11 +121,9 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
         if (makeResultVisible) {
             binding.carbsInPortionText.visibility = View.VISIBLE
             binding.unitLabelPortion.visibility = View.VISIBLE
-            binding.addToMealButton.isEnabled = true
         } else {
             binding.carbsInPortionText.visibility = View.INVISIBLE
             binding.unitLabelPortion.visibility = View.INVISIBLE
-            binding.addToMealButton.isEnabled = false
         }
     }
 }
