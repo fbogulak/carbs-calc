@@ -54,6 +54,10 @@ class CalculationsViewModel : ViewModel() {
         carbsInMeal.value = carbsInMeal.value?.plus(carbsInPortion)
     }
 
+    fun resetMealCarbs() {
+        carbsInMeal.value = 0.0
+    }
+
     companion object {
         const val CARBS_FORMAT = "%.2f"
         const val PORTION_WEIGHT_FORMAT = "%.0f"
