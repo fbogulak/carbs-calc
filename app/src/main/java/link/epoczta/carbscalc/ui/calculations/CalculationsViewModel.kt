@@ -58,6 +58,13 @@ class CalculationsViewModel : ViewModel() {
         carbsInMeal.value = 0.0
     }
 
+    fun carbsUnitChanged(newUnit: CarbUnits) {
+        when (newUnit) {
+            CarbUnits.CARBOHYDRATE_UNITS -> carbsInMeal.value = carbsInMeal.value?.div(10)
+            else -> carbsInMeal.value = carbsInMeal.value?.times(10)
+        }
+    }
+
     companion object {
         const val CARBS_FORMAT = "%.2f"
         const val PORTION_WEIGHT_FORMAT = "%.0f"
