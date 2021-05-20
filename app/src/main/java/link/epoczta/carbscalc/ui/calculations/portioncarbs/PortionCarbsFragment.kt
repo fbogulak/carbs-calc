@@ -48,12 +48,12 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
                 when (it) {
                     CarbUnits.CARBOHYDRATE_UNITS -> {
                         binding.unitLabelPortion.text = getString(R.string.carb_units)
-                        binding.unitLabelMeal?.text = getString(R.string.carb_units)
+                        binding.unitLabelMeal.text = getString(R.string.carb_units)
                         viewModel.calculatePortionCarbs()
                     }
                     CarbUnits.GRAMS -> {
                         binding.unitLabelPortion.text = getString(R.string.g)
-                        binding.unitLabelMeal?.text = getString(R.string.g)
+                        binding.unitLabelMeal.text = getString(R.string.g)
                         viewModel.calculatePortionCarbs()
                     }
                 }
