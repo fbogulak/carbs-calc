@@ -73,7 +73,7 @@
             android:layout_marginEnd="4dp"
             android:text="@{viewModel.carbsInPortionString}"
             android:textSize="30sp"
-            app:layout_constraintEnd_toStartOf="@+id/unit_label"
+            app:layout_constraintEnd_toStartOf="@+id/unit_label_portion"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toEndOf="@+id/carbs_in_100g_text_field"
@@ -81,7 +81,7 @@
             tools:text="15.58" />
 
         <TextView
-            android:id="@+id/unit_label"
+            android:id="@+id/unit_label_portion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/g"

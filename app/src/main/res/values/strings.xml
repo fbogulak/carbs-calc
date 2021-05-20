@@ -28,4 +28,6 @@
     <string name="version_label">Version:\u0020</string>
     <string name="app_version" translatable="false">1.0.0</string>
     <string name="slice_of_bread_and_calc_with_two_rounded_arrows">Slice of bread and calc with two rounded arrows</string>
+    <string name="add_to_meal">Add To Meal</string>
+    <string name="carbs_in_meal_label">Carbs in meal:</string>
 </resources>

@@ -47,11 +47,13 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
             it?.let {
                 when (it) {
                     CarbUnits.CARBOHYDRATE_UNITS -> {
-                        binding.unitLabel.text = getString(R.string.carb_units)
+                        binding.unitLabelPortion.text = getString(R.string.carb_units)
+                        binding.unitLabelMeal?.text = getString(R.string.carb_units)
                         viewModel.calculatePortionCarbs()
                     }
                     CarbUnits.GRAMS -> {
-                        binding.unitLabel.text = getString(R.string.g)
+                        binding.unitLabelPortion.text = getString(R.string.g)
+                        binding.unitLabelMeal?.text = getString(R.string.g)
                         viewModel.calculatePortionCarbs()
                     }
                 }
@@ -106,10 +108,10 @@ class PortionCarbsFragment : Fragment(), TextWatcher {
 
         if (makeResultVisible) {
             binding.carbsInPortionText.visibility = View.VISIBLE
-            binding.unitLabel.visibility = View.VISIBLE
+            binding.unitLabelPortion.visibility = View.VISIBLE
         } else {
             binding.carbsInPortionText.visibility = View.GONE
-            binding.unitLabel.visibility = View.GONE
+            binding.unitLabelPortion.visibility = View.GONE
         }
     }
 }

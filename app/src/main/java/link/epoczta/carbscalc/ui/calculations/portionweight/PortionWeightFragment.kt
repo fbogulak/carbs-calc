@@ -108,10 +108,10 @@ class PortionWeightFragment : Fragment(), TextWatcher {
 
         if (makeResultVisible) {
             binding.portionWeightText.visibility = View.VISIBLE
-            binding.unitLabel.visibility = View.VISIBLE
+            binding.unitLabelPortion.visibility = View.VISIBLE
         } else {
             binding.portionWeightText.visibility = View.GONE
-            binding.unitLabel.visibility = View.GONE
+            binding.unitLabelPortion.visibility = View.GONE
         }
     }
 }
