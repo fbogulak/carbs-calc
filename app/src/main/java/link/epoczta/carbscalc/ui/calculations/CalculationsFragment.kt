@@ -46,7 +46,7 @@ class CalculationsFragment : Fragment() {
         setHasOptionsMenu(true)
 
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity)
-        val unitValue = sharedPreferences.getString("carbohydrates_unit", "")
+        val unitValue = sharedPreferences.getString(getString(R.string.carbohydrates_unit_key), "")
         viewModel.selectedUnit.value = when (unitValue) {
             getString(R.string.carbohydrate_units_value) -> CarbUnits.CARBOHYDRATE_UNITS
             else -> CarbUnits.GRAMS

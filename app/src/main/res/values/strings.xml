@@ -31,4 +31,6 @@
     <string name="add_to_meal">Add To Meal</string>
     <string name="carbs_in_meal_label">Carbs in meal:</string>
     <string name="reset_meal">Reset Meal</string>
+    <string name="carbohydrates_unit_key" translatable="false">carbohydrate_units_key</string>
+    <string name="unit_category_key" translatable="false">unit_category_key</string>
 </resources>

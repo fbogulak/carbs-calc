@@ -32,12 +32,12 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController)
 
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        if (sharedPreferences.getString("carbohydrates_unit", "") == "")
+        if (sharedPreferences.getString(getString(R.string.carbohydrates_unit_key), "") == "")
             sharedPreferences.edit {
                 if (Locale.getDefault().equals(Locale("pl", "PL")))
-                    putString("carbohydrates_unit", getString(R.string.carbohydrate_units_value))
+                    putString(getString(R.string.carbohydrates_unit_key), getString(R.string.carbohydrate_units_value))
                 else
-                    putString("carbohydrates_unit", getString(R.string.grams_value))
+                    putString(getString(R.string.carbohydrates_unit_key), getString(R.string.grams_value))
             }
     }
 
