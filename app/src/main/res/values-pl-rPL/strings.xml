@@ -27,4 +27,6 @@
     <string name="add_to_meal">Dodaj Do Posiłku</string>
     <string name="carbs_in_meal_label">Węglowodany w posiłku:</string>
     <string name="reset_meal">Resetuj Posiłek</string>
+    <string name="portion_weight_description">Waga pokazuje:</string>
+    <string name="carbs_in_100g_description">Z opakowania produktu odczytuję:</string>
 </resources>
