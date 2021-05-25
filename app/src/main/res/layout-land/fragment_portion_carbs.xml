@@ -19,6 +19,28 @@
             android:layout_height="wrap_content"
             tools:context=".ui.calculations.portioncarbs.PortionCarbsFragment">
 
+            <TextView
+                android:id="@+id/carbs_in_100g_description_text"
+                style="@style/text_normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/carbs_in_100g_description"
+                app:layout_constraintEnd_toEndOf="@+id/carbs_in_100g_text_field"
+                app:layout_constraintStart_toStartOf="@+id/carbs_in_100g_text_field"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/portion_weight_description_text"
+                style="@style/text_normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/portion_weight_description"
+                app:layout_constraintBottom_toTopOf="@+id/portion_weight_text_field"
+                app:layout_constraintEnd_toEndOf="@+id/portion_weight_text_field"
+                app:layout_constraintStart_toStartOf="@+id/portion_weight_text_field" />
+
             <Button
                 android:id="@+id/reset_meal_button"
                 style="?attr/materialButtonOutlinedStyle"
@@ -87,14 +109,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:hint="@string/portion_weight"
+                app:layout_constraintBaseline_toBaselineOf="@+id/carbs_in_100g_text_field"
                 app:layout_constraintEnd_toStartOf="@+id/carbs_in_100g_text_field"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:suffixText="@string/g">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -112,12 +133,13 @@
                 android:id="@+id/carbs_in_100g_text_field"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:hint="@string/carbs_in_100_g"
                 app:errorEnabled="true"
-                app:layout_constraintBaseline_toBaselineOf="@+id/portion_weight_text_field"
                 app:layout_constraintEnd_toStartOf="@+id/carbs_in_portion_label"
                 app:layout_constraintStart_toEndOf="@+id/portion_weight_text_field"
+                app:layout_constraintTop_toBottomOf="@+id/carbs_in_100g_description_text"
                 app:suffixText="@string/g">
 
                 <com.google.android.material.textfield.TextInputEditText
