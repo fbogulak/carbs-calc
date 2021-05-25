@@ -77,6 +77,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="4dp"
                 android:text="@{viewModel.portionWeightString}"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toStartOf="@+id/unit_label_portion"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -91,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:text="@string/g"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="24sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/portion_weight_text"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -106,6 +108,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/portion_weight_label"
+                android:textColor="?attr/colorPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/carbs_in_100g_text_field" />
