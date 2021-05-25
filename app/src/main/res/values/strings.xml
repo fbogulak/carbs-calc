@@ -34,5 +34,6 @@
     <string name="carbohydrates_unit_key" translatable="false">carbohydrate_units_key</string>
     <string name="unit_category_key" translatable="false">unit_category_key</string>
     <string name="portion_weight_description">My scale shows:</string>
+    <string name="portion_carbs_description">I want to eat:</string>
     <string name="carbs_in_100g_description">My product\'s label says it contains:</string>
 </resources>
