@@ -32,25 +32,25 @@
 
             <TextView
                 android:id="@+id/about_description_text"
+                style="@style/text_normal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/about_description"
-                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
             <TextView
                 android:id="@+id/icons8_label_text"
+                style="@style/text_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/about_linking"
-                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/version_label" />
 
@@ -71,35 +71,35 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/developer_label"
-                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/about_description_text" />
+                app:layout_constraintTop_toBottomOf="@+id/about_description_text"
+                style="@style/text_normal" />
 
             <TextView
                 android:id="@+id/developer_text"
+                style="@style/text_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_developer"
-                android:textSize="16sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/developer_label"
                 app:layout_constraintStart_toEndOf="@+id/developer_label" />
 
             <TextView
                 android:id="@+id/version_label"
+                style="@style/text_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/version_label"
-                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/developer_label" />
 
             <TextView
                 android:id="@+id/version_text"
+                style="@style/text_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_version"
-                android:textSize="16sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/version_label"
                 app:layout_constraintStart_toEndOf="@+id/version_label" />
 
