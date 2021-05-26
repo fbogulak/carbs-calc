@@ -72,29 +72,23 @@ class PortionWeightFragment : Fragment(), TextWatcher {
             val carbsIn100g: Double
 
             if (s.isNullOrEmpty()) {
-                setError(null, false)
+                setError(null)
                 return
             } else {
                 val localSeparator = DecimalFormatSymbols.getInstance().decimalSeparator.toString()
                 try {
                     carbsIn100g = s.toString().replace(localSeparator, ".").toDouble()
                 } catch (e: NumberFormatException) {
-                    setError(getString(R.string.wrong_number_format), false)
+                    setError(getString(R.string.wrong_number_format))
                     return
                 }
             }
 
             when {
-                carbsIn100g < 0 -> setError(
-                    getString(R.string.this_value_cant_be_lower_than_0),
-                    false
-                )
-                carbsIn100g == 0.0 -> setError(getString(R.string.this_value_cant_be_0), false)
-                carbsIn100g > 100 -> setError(
-                    getString(R.string.this_value_cant_be_greater_than_100),
-                    false
-                )
-                else -> setError(null, true)
+                carbsIn100g < 0 -> setError(getString(R.string.this_value_cant_be_lower_than_0))
+                carbsIn100g == 0.0 -> setError(getString(R.string.this_value_cant_be_0))
+                carbsIn100g > 100 -> setError(getString(R.string.this_value_cant_be_greater_than_100))
+                else -> setError(null)
             }
         }
     }
@@ -103,15 +97,7 @@ class PortionWeightFragment : Fragment(), TextWatcher {
         viewModel.calculatePortionWeight()
     }
 
-    private fun setError(error: String?, makeResultVisible: Boolean) {
+    private fun setError(error: String?) {
         binding.carbsIn100gTextField.error = error
-
-        if (makeResultVisible) {
-            binding.portionWeightText.visibility = View.VISIBLE
-            binding.unitLabelPortion.visibility = View.VISIBLE
-        } else {
-            binding.portionWeightText.visibility = View.GONE
-            binding.unitLabelPortion.visibility = View.GONE
-        }
     }
 }
