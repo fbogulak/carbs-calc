@@ -24,12 +24,13 @@
                 style="@style/text_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/carbs_in_meal_label"
+                android:textColor="@color/material_on_background_emphasis_medium"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/meal_icon"
                 app:layout_constraintTop_toBottomOf="@+id/add_to_meal_button" />
 
             <TextView
@@ -40,6 +41,7 @@
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="16dp"
                 android:text="@{viewModel.carbsInMealString}"
+                android:textColor="@color/material_on_background_emphasis_medium"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/unit_label_meal"
@@ -55,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:text="@string/g"
+                android:textColor="@color/material_on_background_emphasis_medium"
                 android:textSize="20sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/carbs_in_meal_text"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -144,13 +147,13 @@
                 style="@style/text_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/carbs_in_portion_label"
                 android:textColor="?attr/colorPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/bread_icon"
                 app:layout_constraintTop_toBottomOf="@+id/carbs_in_100g_text_field" />
 
             <Button
@@ -206,6 +209,36 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/portion_weight_text_field" />
+
+            <ImageView
+                android:id="@+id/bread_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/slice_of_bread_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/carbs_in_portion_label"
+                app:layout_constraintEnd_toStartOf="@+id/carbs_in_portion_label"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_bread"
+                app:tint="?attr/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/meal_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/fork_and_knife_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/carbs_in_meal_label"
+                app:layout_constraintEnd_toStartOf="@+id/carbs_in_meal_label"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_restaurant"
+                app:tint="@color/material_on_background_emphasis_medium" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

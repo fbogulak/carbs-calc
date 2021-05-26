@@ -30,4 +30,7 @@
     <string name="portion_weight_description">Waga pokazuje:</string>
     <string name="carbs_in_100g_description">Z opakowania produktu odczytuję:</string>
     <string name="portion_carbs_description">Chcę zjeść tyle węglowodanów:</string>
+    <string name="slice_of_bread_icon">Ikonka kromki chleba</string>
+    <string name="kitchen_scale_icon">Ikonka wagi kuchennej</string>
+    <string name="fork_and_knife_icon">Ikonka noża i widelca</string>
 </resources>
